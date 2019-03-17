@@ -35,14 +35,14 @@
 
     <main id="content" class="main-content" role="main">
       {% for post in site.posts %}
-        <a id="header-2" class="anchor" href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
-        {% if post.description %}
-          <blockquote>
-              <p>
-                  {{ post.description }}
-              </p>
-          </blockquote>
-        {% endif %}
+        <h2>
+          <a id="header-2" class="anchor" href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
+          {% if post.description %}
+            <p>
+                {{ post.description }}
+            </p>
+          {% endif %}
+        </h2>
       {% endfor %}
 
       <footer class="site-footer">

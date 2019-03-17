@@ -3,6 +3,10 @@ title: Aukhatov's Blog
 name: Arthur Aukhatov Blog
 email: aaukhatov@gmail.com
 description: Here you can find something helpful for yourself
+copyright: © 2019
+baseurl: ""
 footer-links:
   github: aukhatov
   twitter: aaukhatov
+header_pages:
+ - about.md

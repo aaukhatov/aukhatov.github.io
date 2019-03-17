@@ -1,6 +1,4 @@
 ---
-layout: post
-theme: jekyll-theme-cayman
 categories: java patterns
 title: Singleton Pattern in Java
 ---

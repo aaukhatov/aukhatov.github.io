@@ -1,5 +1,4 @@
 ---
-layout: post
 title: Singleton Pattern in Java
 category: [Java]
 tags: [java, patterns]

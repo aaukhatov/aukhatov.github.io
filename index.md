@@ -1,3 +1,7 @@
+---
+title: Aukhatov's Blog
+description: Here you can find something helpful for yourself
+---
 ### Markdown
 
 Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for

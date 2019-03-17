@@ -1,8 +1,6 @@
 ---
+layout: post
 title: Singleton Pattern in Java
-category: [Java]
-tags: [java, patterns]
-permalink: /posts/singleton-java
 ---
 Существует несколько способов создания singletons в Java. Рассмотрим несколько из них, разделив на две группы.
 > Шаблон **Singleton** используется для ограничения создания экземпляра класса и **гарантирует** что в JVM **существует только один экземпляр** этого класса.

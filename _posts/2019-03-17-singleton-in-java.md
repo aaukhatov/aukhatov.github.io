@@ -1,5 +1,7 @@
 ---
 layout: post
+theme: jekyll-theme-cayman
+categories: java patterns
 title: Singleton Pattern in Java
 ---
 Существует несколько способов создания singletons в Java. Рассмотрим несколько из них, разделив на две группы.

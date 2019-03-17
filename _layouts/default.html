@@ -34,7 +34,9 @@
     </header>
 
     <main id="content" class="main-content" role="main">
-      {{ site.posts }}
+      {% for item in site.posts %}
+        {{ item.title }}
+      {% endfor %}
 
       <footer class="site-footer">
         {% if site.github.is_project_page %}

@@ -37,12 +37,12 @@
       {% for post in site.posts %}
         <h2>
           <a id="header-2" class="anchor" href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
-          {% if post.description %}
-            <p>
-                {{ post.description }}
-            </p>
-          {% endif %}
         </h2>
+        {% if post.description %}
+          <p>
+              {{ post.description }}
+          </p>
+        {% endif %}
       {% endfor %}
 
       <footer class="site-footer">

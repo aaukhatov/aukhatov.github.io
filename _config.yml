@@ -10,3 +10,5 @@ footer-links:
   twitter: aaukhatov
 header_pages:
  - about.md
+
+excerpt_separator: "<!--excerpt-->"

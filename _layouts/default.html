@@ -36,12 +36,12 @@
     <main id="content" class="main-content" role="main">
       {% for post in site.posts %}
         <h2>
-          <a id="header-2" class="anchor" href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
+          <a id="header-2" class="anchor" href="{{ site.baseurl }}{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
         </h2>
-        {% if post.summary %}
-          <p>
-              {{ post.summary }}
-          </p>
+        <span class="post-date">{{ post.date | date: '%b %-d, %Y' }}</span>
+        {{ post.excerpt }}
+        {% if post.content contains site.excerpt_separator %}
+          <a href="{{ site.baseurl }}{{ post.url }}">Read more</a>
         {% endif %}
       {% endfor %}
 

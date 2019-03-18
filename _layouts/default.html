@@ -38,9 +38,9 @@
         <h2>
           <a id="header-2" class="anchor" href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
         </h2>
-        {% if post.description %}
+        {% if post.summary %}
           <p>
-              {{ post.description }}
+              {{ post.summary }}
           </p>
         {% endif %}
       {% endfor %}

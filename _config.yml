@@ -13,6 +13,8 @@ footer-links:
 header_pages:
  - about.md
 
+google_analytics: UA-136638592-1
+
 excerpt_separator: "<!--excerpt-->"
 plugins:
   - jekyll-sitemap

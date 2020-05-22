@@ -55,13 +55,15 @@ categories: java
 
 Для реализации логики выполнения запроса по порциям, напишем класс обёртку - `art.aukhatov.http.WebClient`.
 
-Опишем интерфейс этого класса
+### Опишем интерфейс этого класса
 
 - `byte[] download(String uri, int chunkSize)` - скачивает файл по указанным порциям байтов;
 - `Response download(String uri, int firstBytePos, int lastBytePos)` - скачивает файл по указанному диапазону.
 
 В случае если переданный `URI` не валидный, то метод бросает исключение `java.net.URISyntaxException`.
 Исключение `java.io.IOException` бросается если какая-либо неожиданная ошибка с вводом/выводом.
+
+### Класс WebClient и Response
 
 ```java
 package art.aukhatov.http;
@@ -99,6 +101,8 @@ public class WebClient {
 В качестве представления ответа опишем `nested class WebClient.Response` с полями BufferedInputStream, HTTP Status, HTTP Header.
 Эти данные необходимы для формирования результирующего массива байтов и понимания продолжать скачивать или нет.
 
+### Метод `Response download(final String uri, int firstBytePos, int lastBytePos)`
+
 ```java
 import java.io.BufferedInputStream;
 import java.io.IOException;
@@ -131,6 +135,8 @@ public Response download(final String uri, int firstBytePos, int lastBytePos)
 
 Этот метод скачивает указанный диапазон данных. Но прежде чем начать нам нужно знать сколько всего данных нам надо ожидать. Для этого необходимо сделать запрос без получения контента. Воспользуемся методом `HEAD`.
 
+### Метод `long contentLength(final String uri)`
+
 ```java
 import java.util.OptionalLong;
 
@@ -156,6 +162,8 @@ private long contentLength(final String uri)
 ```
 
 Теперь у нас есть ожидаемая длина файла в байтах.
+
+### Метод `byte[] download(final String uri, int chunkSize)`
 
 Можем приступить к написанию метода контролирующего скачивание файла по порциям. Для удобства, договоримся что размер порций будет передаваться вторым аргументом в этот метод `byte[] download(final String uri, int chunkSize)`. Хотя можно было бы придумать умный способ определения размера порций.
 
@@ -429,6 +437,8 @@ public class WebClient {
 	}
 }
 ```
+
+### Тестирование
 
 Теперь можем написать тест на скачивание файла. Для примера возьмем рандомный файл в Интернете из доступных без аутентификации: https://file-examples.com/wp-content/uploads/2017/10/file-example_PDF_1MB.pdf
 

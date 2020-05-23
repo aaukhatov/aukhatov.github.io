@@ -444,7 +444,7 @@ public class WebClient {
 
 ### Тестирование
 
-Теперь можем написать тест на скачивание файла. Для примера возьмем рандомный файл в Интернете из доступных без аутентификации: https://file-examples.com/wp-content/uploads/2017/10/file-example_PDF_1MB.pdf
+Теперь можем написать тест на скачивание файла. Для примера возьмем рандомный файл в Интернете из доступных без аутентификации: [https://file-examples.com/wp-content/uploads/2017/10/file-example_PDF_1MB.pdf](https://file-examples.com/wp-content/uploads/2017/10/file-example_PDF_1MB.pdf)
 
 Сохраним файл во временную директорию. И проверим размер файла.
 
